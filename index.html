@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><title>MAD KARTS — картинг в браузере</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark">
+<style>
+:root{--bg:#0b1020;--fg:#f2f4fb;--mut:#aab2c8;--y:#ffcc00;--r:#e0243f;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:860px;margin:0 auto;padding:clamp(24px,6vw,72px) 20px 48px}
+h1{font:italic 900 clamp(48px,14vw,128px)/.92 "Trebuchet MS",system-ui,sans-serif;margin:0;color:var(--y);text-shadow:5px 5px 0 var(--r)}
+.kerb{height:14px;margin:28px 0;background:repeating-linear-gradient(90deg,var(--r) 0 28px,#fff 28px 56px)}
+.lead{font-size:clamp(19px,3vw,24px);max-width:34em;margin:0 0 26px}
+.btn{display:inline-block;background:var(--y);color:#111;font-weight:800;padding:14px 28px;border-radius:12px;text-decoration:none;margin:0 10px 10px 0}
+.btn.s{background:#232a42;color:var(--fg)}
+h2{font:italic 800 28px "Trebuchet MS",system-ui,sans-serif;margin:52px 0 14px;color:var(--y)}
+dl{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:10px 22px;margin:0}dt{font-weight:800}dd{margin:0;color:var(--mut)}
+@media(max-width:560px){dl{grid-template-columns:1fr}dd{margin-bottom:8px}}
+kbd{display:inline-block;min-width:44px;padding:8px 12px;margin:3px;border-radius:8px;background:#1b2238;border:1px solid #3a4468;border-bottom-width:4px;text-align:center;font:700 18px ui-monospace,monospace}
+ol{padding-left:22px}li{margin:8px 0}code{background:#171d33;padding:2px 8px;border-radius:6px;font-family:ui-monospace,monospace}
+footer{margin-top:56px;color:var(--mut);font-size:14px}
+</style></head><body><main>
+<h1>MAD KARTS</h1><div class="kerb"></div>
+<p class="lead">Семь кругов по случайной трассе против ботов или друзей. Работает в браузере, на компьютере и на телефоне, ничего устанавливать не нужно.</p>
+<a class="btn" id="play" href="/play">Играть</a><a class="btn s" href="#online">Играть с друзьями</a>
+<h2>Что внутри</h2>
+<dl><dt>Новая трасса</dt><dd>Каждый заезд на новой трассе: от длинных дуг до змеек из резких поворотов. Номер трассы виден в игре.</dd>
+<dt>3D и третье лицо</dt><dd>Камера за спиной, гонщики в комбинезонах с никами над головой, трибуны, горы, пруды и фонари.</dd>
+<dt>Боты</dt><dd>Пять соперников со своим характером: тормозят перед поворотами, подтягиваются к вам, если вы отстали.</dd>
+<dt>Старт как на ТВ</dt><dd>Облёт трассы, представление гонщиков и светофор с тремя огнями.</dd>
+<dt>Онлайн</dt><dd>Комнаты по коду из четырёх букв, до шести игроков в одной гонке.</dd></dl>
+<h2>Управление</h2>
+<p><kbd>W</kbd> газ &nbsp; <kbd>S</kbd> тормоз и задний ход &nbsp; <kbd>A</kbd> <kbd>D</kbd> повороты. Подойдут и стрелки, пробел тоже тормозит. Раскладка клавиатуры не важна. На телефоне — кнопки на экране.</p>
+<h2 id="online">Играть с друзьями</h2>
+<p>Онлайн-режиму нужен сервер: он передаёт положение машин между игроками. Он лежит в папке игры, зависимостей нет, нужен только Node.js.</p>
+<ol><li>Запустите сервер командой <code>node server.js</code>.</li><li>Откройте <code>http://localhost:3000/play</code> и нажмите «Онлайн с друзьями», затем «Создать комнату».</li><li>Отправьте друзьям четыре буквы кода. Они откроют ту же страницу и введут код.</li><li>Когда все в комнате, хозяин нажимает «Начать гонку».</li></ol>
+<p>Чтобы играть через интернет, загрузите папку на любой хостинг с Node.js (Render, Fly.io, VPS) и отправьте друзьям адрес. Игра и сервер должны открываться с одного адреса.</p>
+<footer>MAD KARTS. Рейтинг и магазин появятся позже: им нужна база данных.</footer>
+</main></body></html>
